@@ -1,9 +1,10 @@
+/*global require*/
 'use strict';
 
 var gulp = require('gulp');
 var del = require('del');
 var shell = require('gulp-shell');
-
+var rename = require("gulp-rename");
 var path = require('path');
 
 
@@ -92,8 +93,9 @@ gulp.task('html', function() {
 
 // xml
 gulp.task('xml', function() {
-    return gulp.src('app/*.xml')
+    return gulp.src('app/config-dev.xml')
         .pipe($.useref())
+        .pipe(rename('config.xml'))
         .pipe(gulp.dest('www'))
         .pipe($.size());
 });
