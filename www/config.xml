@@ -7,7 +7,7 @@
     <author email="to.email.max@gmail.com" href="https://github.com/MaxwellCohen">
         Maxwell Cohen
     </author>
-    <content src="index.html" />
+    <content src="www/index.html" />
     
     <preference name="permissions" value="none"/>
     
